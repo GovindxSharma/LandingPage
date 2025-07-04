@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000;
+    color: #bffcff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .container {
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #bffcff;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+  .highlight {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #bffcff;
+  }
+  
+  .socials {
+    margin-bottom: 2.5rem;
+  }
+  
+  .socials a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .socials a:hover {
+    color: #bffcff;
+  }
+  
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem; /* ← increased spacing here */
+    color: #fff;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  
+  .footer span {
+    font-weight: bold;
+  }
+  
+  @media (max-width: 600px) {
+    .description,
+    .highlight {
+      font-size: 1rem;
+    }
+  
+    .footer {
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+  }
+  

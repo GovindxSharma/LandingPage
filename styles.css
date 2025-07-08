@@ -24,13 +24,16 @@ body {
   max-width: 900px;
   width: 100%;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 /* Logo */
 .logo-img {
   width: 70px;
   height: 70px;
-  margin-bottom: 1rem;
   object-fit: contain;
 }
 
@@ -38,7 +41,6 @@ body {
 .tagline {
   font-size: 1.5rem;
   color: #fff;
-  margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
 }
 
@@ -48,7 +50,6 @@ body {
   line-height: 1.5;
   color: #d1eff4;
   font-weight: 500;
-  margin-bottom: 1.2rem;
   letter-spacing: 0.4px;
 }
 
@@ -56,17 +57,12 @@ body {
 .highlight {
   font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 1.8rem;
   color: #d1eff4;
   line-height: 1.5;
   letter-spacing: 0.4px;
 }
 
 /* Social Links */
-.socials {
-  margin-bottom: 2rem;
-}
-
 .socials a {
   margin: 0 0.8rem;
   font-size: 1.6rem;
@@ -78,7 +74,7 @@ body {
   color: #d1eff4;
 }
 
-/* Footer */
+/* Desktop Footer */
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -99,8 +95,12 @@ body {
   line-height: 1.5;
 }
 
-/* Hide <br> on desktop */
 .footer .break-line br {
+  display: none;
+}
+
+/* Mobile-only Footer - hidden by default */
+.footer-mobile {
   display: none;
 }
 
@@ -112,33 +112,23 @@ body {
   }
 
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem; /* Uniform spacing */
+    gap: 1.5rem;
   }
 
   .logo-img {
     width: 60px;
     height: 60px;
-    margin-bottom: 0;
   }
 
   .tagline {
     font-size: 1.3rem;
-    margin-bottom: 0;
   }
 
   .description,
   .highlight {
     font-size: 0.95rem;
     letter-spacing: 0.3px;
-    margin-bottom: 0;
     line-height: 1.5;
-  }
-
-  .socials {
-    margin-bottom: 0;
   }
 
   .socials a {
@@ -147,17 +137,31 @@ body {
   }
 
   .footer {
+    display: none; /* Hide desktop footer */
+  }
+
+  .footer-mobile {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.8rem;
     padding-bottom: 1rem;
   }
 
-  .footer span {
+  .footer-mobile span,
+  .footer-mobile .footer-stack strong {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 900;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    color: #d1eff4;
+    text-transform: uppercase;
+    line-height: 1.6;
   }
 
-  .footer .break-line br {
-    display: inline;
+  .footer-mobile .footer-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
   }
 }

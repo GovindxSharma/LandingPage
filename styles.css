@@ -1,167 +1,179 @@
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-  background-color: #000;
-  color: #d1eff4;
-  font-family: 'Noto Sans', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  padding: 2rem;
-  overflow-x: hidden;
-}
-
-/* Container */
-.container {
-  max-width: 900px;
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-/* Logo */
-.logo-img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-}
-
-/* Tagline */
-.tagline {
-  font-size: 1.5rem;
-  color: #fff;
-  letter-spacing: 0.5px;
-}
-
-/* Description Paragraph */
-.description {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: #d1eff4;
-  font-weight: 500;
-  letter-spacing: 0.4px;
-}
-
-/* Highlight Paragraph */
-.highlight {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #d1eff4;
-  line-height: 1.5;
-  letter-spacing: 0.4px;
-}
-
-/* Social Links */
-.socials a {
-  margin: 0 0.8rem;
-  font-size: 1.6rem;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-.socials a:hover {
-  color: #d1eff4;
-}
-
-/* Desktop Footer */
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 0.95rem;
-  text-align: center;
-  padding-bottom: 1rem;
-}
-
-.footer span {
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 900;
-  font-size: 1.4rem;
-  letter-spacing: 1.2px;
-  color: #d1eff4;
-  text-transform: uppercase;
-  line-height: 1.5;
-}
-
-.footer .break-line br {
-  display: none;
-}
-
-/* Mobile-only Footer - hidden by default */
-.footer-mobile {
-  display: none;
-}
-
-/* ========== MOBILE OPTIMIZATION ========== */
-@media (max-width: 600px) {
+/* ===============================
+   Global Reset and Box Model Setup
+   =============================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+  }
+  
+  /* ===============================
+     Base Body Styling
+     =============================== */
   body {
-    padding: 1.5rem 1rem;
-    flex-direction: column;
+    background-color: #000; /* Dark background for contrast */
+    color: #d1eff4; /* Light text color for readability */
+    font-family: 'Noto Sans', sans-serif; /* Clean, modern font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 2rem;
+    overflow-x: hidden; /* Prevent horizontal scroll */
   }
-
+  
+  /* ===============================
+     Main Container Layout
+     =============================== */
   .container {
-    gap: 1.5rem;
-  }
-
-  .logo-img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .tagline {
-    font-size: 1.3rem;
-  }
-
-  .description,
-  .highlight {
-    font-size: 0.95rem;
-    letter-spacing: 0.3px;
-    line-height: 1.5;
-  }
-
-  .socials a {
-    font-size: 1.5rem;
-    margin: 0 0.6rem;
-  }
-
-  .footer {
-    display: none; /* Hide desktop footer */
-  }
-
-  .footer-mobile {
+    max-width: 900px;
+    width: 100%;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1.5rem; /* Spacing between children */
+  }
+  
+  /* ===============================
+     Logo Styling
+     =============================== */
+  .logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain; /* Keeps aspect ratio intact */
+  }
+  
+  /* ===============================
+     Tagline Text Styling
+     =============================== */
+  .tagline {
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+  
+  /* ===============================
+     Description Text Styling
+     =============================== */
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+  }
+  
+  /* ===============================
+     Social Media Icons
+     =============================== */
+  .socials a {
+    margin: 0 0.8rem;
+    font-size: 1.6rem;
+    color: #fff;
+    transition: color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .socials a:hover {
+    color: #d1eff4; /* Highlight on hover */
+  }
+  
+  /* ===============================
+     Desktop Footer Layout
+     =============================== */
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
     padding-bottom: 1rem;
   }
-
-  .footer-mobile span,
-  .footer-mobile .footer-stack strong {
-    font-family: 'Noto Sans', sans-serif;
+  
+  .footer span {
     font-weight: 900;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1.4rem;
+    letter-spacing: 1.2px;
     color: #d1eff4;
     text-transform: uppercase;
-    line-height: 1.6;
+    line-height: 1.5;
   }
-
-  .footer-mobile .footer-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
+  
+  /* Hide line break on desktop view */
+  .footer .break-line br {
+    display: none;
   }
-}
+  
+  /* ===============================
+     Mobile Footer (Initially Hidden)
+     =============================== */
+  .footer-mobile {
+    display: none; /* Shown only on small screens */
+  }
+  
+  /* ===============================
+     Responsive Design for Mobile Devices
+     =============================== */
+  @media (max-width: 600px) {
+    /* Adjust body padding and layout */
+    body {
+      padding: 1.5rem 1rem;
+      flex-direction: column;
+    }
+  
+    /* Resize logo */
+    .logo-img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    /* Adjust tagline font size */
+    .tagline {
+      font-size: 1.3rem;
+    }
+  
+    /* Adjust description font size and spacing */
+    .description {
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+      margin-bottom: 1.5rem; /* Adds space below the description */
+    }
+  
+    /* Adjust social icons size and spacing */
+    .socials a {
+      font-size: 1.5rem;
+      margin: 0 0.6rem;
+    }
+  
+    /* Hide desktop footer on mobile */
+    .footer {
+      display: none;
+    }
+  
+    /* Show and style mobile-specific footer */
+    .footer-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+      padding-bottom: 1rem;
+    }
+  
+    /* Mobile footer text styling */
+    .footer-mobile span,
+    .footer-mobile .footer-stack strong {
+      font-weight: 900;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      color: #d1eff4;
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+  
+    /* Stack 'FOR THE FUTURE' vertically */
+    .footer-mobile .footer-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+  }
+  
